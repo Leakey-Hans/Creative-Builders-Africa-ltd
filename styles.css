@@ -5,19 +5,19 @@
 }
 
 body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 .navbar{
     background-color: #ffff;
     display: flex;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     width: 100%;
 }
 
 .nav_container{
     display: flex;
-    border: 2px solid rgb(197, 13, 13);
+    /*border: 2px solid rgb(197, 13, 13);*/
     width: 100%;
     align-items: center;
     padding-left: 40px;
@@ -28,10 +28,12 @@ body{
     list-style: none;
     display: flex;
     color: black;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     margin-left: auto;
     width: 50%;
     justify-content: space-evenly;
+    height: 40px;
+    align-items: center;
     
 }
 
@@ -40,3 +42,279 @@ body{
     color: black;
 }
 
+#nav_cta a{ /*Get a quick quote button*/
+    background-color: rgb(0, 0, 0);
+    color: #ffff;
+    padding: 9px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    }
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    }
+
+        .slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 600px;
+            padding: 0 3rem;
+            margin-left: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .cta-button {
+            background: black;
+            color: white;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(100, 200, 103, 0.4);
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgb(255, 255, 255);
+        }
+
+        .cta-button a{
+            text-decoration: none;
+            color: white;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Slide indicators */
+        .slide-indicators {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            z-index: 2;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+
+.about_container{
+    /*border: 2px solid black;*/
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.about_content{
+    /*border: 2px solid red;*/
+    width: 70%;
+    text-align: center;
+    justify-items: center;
+    flex: 1;
+    height: 220px;
+}
+
+.about_content .top{
+    background-color: rgb(212, 212, 212);
+    width: 100px;
+    padding: 2px;
+    margin-top: 3px;
+    font-size: 20px;
+}
+
+.about_content h1{
+    font-size: 30px;
+}
+
+.about_content a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px grey;
+}
+
+.about_content a:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px black;
+
+}
+
+/*Project Tiles*/
+
+.card_container{
+    border: 2px solid blue;
+    width: 100%;
+    height: 650px;
+    margin-top: 30px;
+    padding: 40px;
+    justify-items: center;
+    display: flex;
+}
+
+.project_card{
+    width: 350px;
+    background-color: #ffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.project_card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card_image{
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.project-card:hover .card-image img {
+    transform: scale(1.1);
+    }
+
+.card_content{
+    padding: 1.5em;
+}
+
+.card_meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.card_category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+    
+.card_year {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.card_title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+            
+            

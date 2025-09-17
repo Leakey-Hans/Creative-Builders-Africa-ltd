@@ -14,10 +14,13 @@
                 <div class="navbar"><!--For debbuging-->
                     <div class="nav_container">
                         <img src="./images/logo.png" alt="creative builders logo" height="60" >
+                        <!--Navlinks-->
                         <ul class="navlinks">
                             <li><strong><a href="index.html">Home</a></strong></li>
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Renders</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Contact Us</a></li>
                             <li id="nav_cta"><a href="#">Get a Quick Quote</a>
                             </li>
                         </ul>
@@ -25,6 +28,129 @@
                 </div>
             </nav>
         </header>
-    </main>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="./images/hero Images/bannerimage1.webp" alt="Technology workspace">
+            </div>
+            <div class="slide">
+                <img src="./images/hero Images/bannerImage2.webp" alt="Business meeting">
+            </div>
+            <div class="slide">
+                <img src="./images/hero Images/bannerimage3.webp" alt="Team collaboration">
+            </div>
+            <div class="slide">
+                <img src="./images/hero Images/bannerimage4.webp" alt="Creative workspace">
+            </div>
+            <div class="slide">
+                <img src="./images/hero Images/bannerimage5.webp" alt="Business growth">
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <h1>Elevating Ideas into Architecture</h1>
+            <p>Guiding you through every stage of design and construction</p>
+            <button class="cta-button" onclick="alert('CTA Button Clicked!')"><a href="#">View Our Portfolio</a></button>
+        </div>
+
+        <div class="slide-indicators">
+            <div class="indicator active" onclick="goToSlide(0)"></div>
+            <div class="indicator" onclick="goToSlide(1)"></div>
+            <div class="indicator" onclick="goToSlide(2)"></div>
+            <div class="indicator" onclick="goToSlide(3)"></div>
+            <div class="indicator" onclick="goToSlide(4)"></div>
+        </div>
+    </section>
+
+        <!--About Content-->
+    <section>
+        <div class="about_container">
+            <div class="about_content">
+                <p class="top">About Us</p>
+                <br>
+                <h1>From Blueprint to Reality</h1><br>
+                <p>For ten years, Creative Builders Africa Ltd has been at the forefront of contemporary design creating projects that seamlessly blend innovation and elegance.
+                <br>
+                Our approach is rooted in understanding every client’s story, turning ideas into reality with careful detail and sustainable building practices.
+                <br>
+                From family homes to signature commercial spaces, we work hand in hand with our clients to create projects that reflect their vision while setting new standards in architecture.</p>
+                <br>
+                <br>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+    <!--Fearured Projects Section-->
+        <div>
+            <h2 style="text-align: center; margin-top: 30px;">Featured Projects</h2>
+            <br>
+            <p style="text-align: center;">Discover our portfolio of projects that showcase innovation, <br>sustainability, and timeless design principles.</p>
+        </div>
+     <!--Project Tiles-->
+        <div class="card_container">
+            <!--Card 1-->
+            <div class="project_card">
+                <div class="card_image">
+                    <img src="./images/card1.webp" alt="Project One tile">
+                </div>
+                <div class="card_content">
+                    <div class="card_meta">
+                        <span class="card_category">Residential</span>
+                        <span class="card_year">2023</span>
+                    </div>
+                    <h3 class="card_title">Milimani Drive AO4</h3>
+                    <p class="card_description">A one storey moden home that balances privacy, comfort, striking architectural from and seamless indoor-outdoor</p>
+                </div>
+            </div>
+            <!--Card 2-->
+            <!--We left here on card two-->
+            <div class="project_card">
+                <div class="card_image">
+                    <img src="./images/card2.webp" alt="Project 2 tile">
+                </div>
+                <div class="card_content">
+                    <div class="card_meta">
+                        <span class="card_category">Residential</span>
+                        <span class="card_year">2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <section>
+
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Remove active class from all slides and indicators
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Add active class to current slide and indicator
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance slides every 4 seconds
+        setInterval(nextSlide, 4000);
+    </script>
+    </main>   
 </body>
 </html>
