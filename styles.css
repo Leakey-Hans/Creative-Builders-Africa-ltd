@@ -42,6 +42,7 @@ body{
     color: black;
 }
 
+
 #nav_cta a{ /*Get a quick quote button*/
     background-color: rgb(0, 0, 0);
     color: #ffff;
@@ -219,12 +220,13 @@ body{
 
 .about_content a{
     text-decoration: none;
-    color: white;
-    background-color: black;
-    padding: 10px;
-    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 9px;
+    border: 2px solid black;
+    border-radius: 8px;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px grey;
+    /*box-shadow: 0 10px 30px grey;*/
 }
 
 .about_content a:hover{
@@ -236,13 +238,17 @@ body{
 /*Project Tiles*/
 
 .card_container{
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
     width: 100%;
-    height: 650px;
-    margin-top: 30px;
+    height: 1000px;
+    margin-top: 0px;
     padding: 40px;
-    justify-items: center;
     display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    background-color: #f3f3f3;
+    
 }
 
 .project_card{
@@ -253,6 +259,8 @@ body{
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
+    height: 450px;
+    flex-basis: auto;
 }
 
 .project_card:hover{
@@ -262,7 +270,7 @@ body{
 
 .card_image{
     width: 100%;
-    height: 220px;
+    height: 250px;
     overflow: hidden;
     position: relative;
 }
@@ -316,5 +324,48 @@ body{
     color: #64748b;
     line-height: 1.6;
 }
-            
+
+#cardlink a{
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 9px;
+    border-radius: 8px;
+    font-size: 17px;
+    transition: all ease 0.3s;
+}
+
+#cardlink a:hover{
+    background-color: black;
+    color: #ffffff;
+}
+
+#cardlink{
+    text-align: center;
+}
+
+.more_container{
+    /*border: 2px solid red;*/
+    height: 60px;
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services_section{
+    border: 2px solid black;
+    width: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.services_container{
+    border: 2px solid rgb(187, 32, 32);
+    height: 250px;
+    flex-basis: auto;
+    width: 300px;
+    border-radius: 8px;
+    
+}
             
