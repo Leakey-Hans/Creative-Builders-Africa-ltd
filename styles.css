@@ -72,13 +72,19 @@ body{
     border-radius: 5px;
     font-weight: 600;
     text-align: center;
+    transition: all ease 0.3s;
+}
+
+#nav_cta a:hover{
+    background-color: rgb(255, 255, 255);
+    color: #000000;
 }
 
 /* Hero Section */
 
 .hero {
     position: relative;
-    height: 80vh;
+    height: 70vh;
     overflow: hidden;
     display: flex;
     align-items: center;
