@@ -11,19 +11,22 @@
         <header>
             <!--landing page navigation bar-->
             <nav>
-                <div class="navbar"><!--For debbuging-->
-                    <div class="nav_container">
-                        <img src="../images/logo.png" alt="creative builders logo" height="60" >
-                        <!--Navlinks-->
-                        <ul class="navlinks">
-                            <li><strong><a href="../index.html"rel="noopener noreferrer">Home</a></strong></li>
-                            <li><a href="./pages/about.html">About Us</a></li>
+                <div class="nav_container">
+                    <img src="../images/logo.png" alt="creative builders logo" height="60" >
+                    <!--Navlinks-->
+                        <ul class="navlinks" id="Navlinks">
+                            <li><strong><a href="index.html">Home</a></strong></li>
+                            <li><a href="./pages/about.html" rel="noopener  noreferrer">About Us</a></li>
                             <li><a href="#">Contact Us</a></li>
                             <li><a href="#">Ask For a Fundi</a></li>
                             <li id="nav_cta"><a href="https://forms.gle/TidR2JVRaxYHT66R8" target="_blank" rel="noopener noreferrer">Get a Quick Quote</a>
                             </li>
                         </ul>
-                    </div>
+                        <div class="hamburger" id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                 </div>
             </nav>
         </header>
@@ -120,4 +123,14 @@
         </div>
     </footer>
 </body>
+<script>
+    //Nav bar media query: Ham menu
+        const hamburger = document.getElementById('hamburger');
+        const Navlinks = document.getElementById('Navlinks');
+
+        hamburger.addEventListener('click', function() {
+            Navlinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+</script>
 </html>
