@@ -32,7 +32,8 @@ body{
     display: flex;
     color: black;
     gap: 32px;
-    /*border: 2px solid black;*/ 
+    /*border: 2px solid black;*/
+    margin-right: 30px;
 }
 
 .navlinks a{
@@ -122,10 +123,11 @@ body{
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        gap: 0;
+        gap: 20px !important ;
         z-index: 1000;
-        border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-right: 0 !important ;
+        
     }
 
     .navlinks.active{
@@ -165,6 +167,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    /*border: 2px solid red;*/
     }
 
 .hero::before {
@@ -214,6 +217,7 @@ body{
             max-width: 600px;
             padding: 0 3rem;
             margin-left: 3rem;
+            /*border: 2px solid orange;*/
         }
 
         .hero h1 {
@@ -292,6 +296,29 @@ body{
             transform: scale(1.2);
         }
 
+@media(max-width: 600px){
+
+    .hero{
+        height: 65vh;
+    }
+
+    .hero-content{
+        margin: 0;
+        max-width: 370px;
+    }
+
+    .hero h1{
+        font-size: 32px;
+    }
+
+    .hero p{
+        font-size: 17px;
+    }
+
+    .cta-button{
+        font-size: 17px;
+    }
+}
 
 .about_container{
     /*border: 2px solid black;*/
@@ -533,19 +560,30 @@ body{
 }
 
 .footer_container{
-    width: 100%;
-    height: 400px;
+    max-width: 100%;
+    min-height: 400px;
     background-color: #33383e;
     padding: 50px;
+    /*border: 2px solid red;*/
 }
 
 .footer_contents{
     /*border: 2px solid ;*/
     display: flex;
-    height: 250px;
+    min-height: 250px;
     color: #929dab;
     justify-content: space-evenly;
     margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 600px){
+    address iframe{
+        max-width: 270px;
+    }
+    .footer_contents div{
+        text-align: center;
+    }
 }
 
 .copyright{

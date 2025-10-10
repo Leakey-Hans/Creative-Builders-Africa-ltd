@@ -25,6 +25,7 @@ body{
     display: flex;
     color: black;
     gap: 32px;
+    margin-right: 30px;
     /*border: 2px solid black;*/ 
 }
 
@@ -115,10 +116,10 @@ body{
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        gap: 0;
+        gap: 20px !important;
         z-index: 1000;
-        border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-right: 0 !important;
     }
 
     .navlinks.active{
