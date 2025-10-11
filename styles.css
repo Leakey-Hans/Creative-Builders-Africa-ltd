@@ -459,6 +459,24 @@ body{
     line-height: 1.6;
 }
 
+.card_icons img{
+    height: 20px;
+}
+
+.card_icons{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 2.3;
+}
+
 #cardlink a{
     text-decoration: none;
     color: black;
@@ -603,6 +621,7 @@ body{
         flex-direction: column;
         min-height: auto;
         text-align: center;
+        flex-wrap: wrap;
     }
 }
 
