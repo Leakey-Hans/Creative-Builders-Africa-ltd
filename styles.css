@@ -491,6 +491,10 @@ body{
     .card_title{
         font-size: 1.2rem;
     }
+
+    .item{
+        font-size: 14px;
+    }
 }
 #cardlink a{
     text-decoration: none;
@@ -649,15 +653,17 @@ body{
     border-radius: 10px;
     background-color: #ffffff;
     padding: 20px;
+    /*border: 2px solid orange;*/
 }
 
 .logo_containers{
     display: flex;
     width: max-content;
     animation: scroll 12s linear infinite;
+    /*border: 2px solid red;*/
 }
 
- .logo_containers img {
+.logo_containers img {
     height: 100px;
     margin: 10px 20px;
     object-fit: contain;
@@ -671,4 +677,17 @@ body{
         transform: translateX(-50%);
       }
     }
-            
+
+@media(max-width: 600px){
+    .Clients_Container{
+        border-radius: 0;
+    }
+    
+    .logo_containers img{
+        height: 65px;
+    }
+
+    .Clients_Container{
+        height: 130px;
+    }
+}
