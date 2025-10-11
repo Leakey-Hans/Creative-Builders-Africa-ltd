@@ -475,8 +475,23 @@ body{
     align-items: center;
     gap: 4px;
     line-height: 2.3;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
 }
 
+@media(max-width: 600px){
+    /*.card_icons img{
+        height: 15px;
+    }*/
+
+    .card_icons{
+        gap: 4px;
+    }
+
+    .card_title{
+        font-size: 1.2rem;
+    }
+}
 #cardlink a{
     text-decoration: none;
     color: black;
