@@ -478,6 +478,7 @@ body{
     color: rgb(96, 213, 195);
     font-weight: 700;
     font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media(max-width: 600px){
@@ -494,7 +495,7 @@ body{
     }
 
     .item{
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 #cardlink a{
@@ -527,43 +528,51 @@ body{
 
 .services_section{
     /*border: 2px solid black;*/
-    max-width: 100%;
-    display: flex;
-    padding: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    background-color: #f3f3f3;
-    padding-top: 50px;
-    flex-wrap: wrap;
+    margin: auto;
+    max-width: 80%;
 }
 
 .services_container{
-    border: 2px solid rgb(43, 50, 115);
-    height: 280px;
-    flex-basis: auto;
-    width: 300px;
-    border-radius: 8px;
-    padding: 10px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    /*border: 2px solid rgb(43, 50, 115);*/
+    border-radius: 16px;
+    padding: 28px 16px;
     background-color: #ffffff;
-    flex-shrink: 1;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: 2px solid #e8e8e8;
+    position: relative;
+    overflow: hidden;
 }
 
+
+
 .service_icon img{
-    height: 70px;
+    height: 60px;
     overflow: hidden;
     margin-bottom: 20px;
     margin-top: 10px;
+    filter: brightness(0) saturate(100%);/*Makes the svg img pure black*/
+    transition: filter 0.3s ease;
 }
 
-.services_container p{
-    color: #747476;
+.services_container:hover {
+    background: #000000;
+    border-color: #1a1a1a;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.services_container:hover img{
+    filter: brightness(0) invert(1); /*Turns the svg img to black*/
 }
 
 .btncontainer{
     width: 100%;
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     padding: 30px;
     display: flex;
     justify-content: center;
