@@ -465,7 +465,7 @@ body{
 
 .card_icons{
     display: flex;
-    gap: 1rem;
+    gap: 10px;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
@@ -477,6 +477,7 @@ body{
     line-height: 2.3;
     color: rgb(96, 213, 195);
     font-weight: 700;
+    font-size: 14px;
 }
 
 @media(max-width: 600px){
