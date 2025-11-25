@@ -1,3 +1,7 @@
+:root{
+    color-scheme: light;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -717,4 +721,9 @@ body{
     background-color: rgb(220, 252, 241);
     padding: 0 8px;
     border-radius: 20px;
+}
+
+#underline{
+    border-bottom: 3px solid #32c985;
+    color: #4e4e4e;
 }
