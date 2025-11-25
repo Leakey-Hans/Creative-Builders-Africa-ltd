@@ -381,6 +381,12 @@ body{
     flex-wrap: wrap;
 }
 
+@media (max-width: 600px){
+    .card_container{
+        width: 100%;
+    }
+}
+
 #cards{
     display: flex;
     flex-direction: column;
