@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Builders Africa</title>
+    <link rel="stylesheet" href="Fundi.css" />
+  </head>
+  <body>
+    <header>
+      <!--landing page navigation bar-->
+      <nav>
+        <div class="nav_container">
+          <img
+            src="../images/logo.png"
+            alt="creative builders logo"
+            height="60"
+          />
+          <!--Navlinks-->
+          <ul class="navlinks" id="Navlinks">
+            <li>
+              <strong
+                ><a href="../index.html" rel="noopener noreferrer">Home</a></strong
+              >
+            </li>
+            <li>
+              <a href="./about.html" rel="noopener  noreferrer"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="https://wa.me/254702066062" rel="noopener noreferrer"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="./Fundi.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ask For a Fundi</a
+              >
+            </li>
+            <li id="nav_cta">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeeZUDoLfwfK-_DFiqmoKOsfmC5urcRTuutRkKA-BElsIbDfg/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Get a Quick Quote</a
+              >
+            </li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div>
+    <!--Form-->
+    <div class="service-form-container">
+      <h2>Ask for a <span>Fundi</span></h2>
+      <p>Fill in the details below and we'll get back to you shortly.</p>
+
+      <form id="serviceForm">
+        <label>Full Name</label>
+        <input
+          type="text"
+          name="fullname"
+          required
+          placeholder="Enter your full name"
+        />
+
+        <label>Phone Number</label>
+        <input
+          type="tel"
+          name="phone"
+          required
+          placeholder="+254 712 XXX XXX"
+        />
+
+        <label>Area / Region</label>
+        <input
+          type="text"
+          name="area"
+          required
+          placeholder="e.g., Nairobi, Westlands"
+        />
+
+        <label>Service Required</label>
+        <select name="service" required>
+          <option value="">Select a service</option>
+          <option>Masons (Walls, Foundations, and Finishings)</option>
+          <option>Electricians (Wiring, Lighting, and Power)</option>
+          <option>Plumbers (Water, Drainage, and Fixtures)</option>
+          <option>Painters and Interior Finishers</option>
+          <option>Carpenters (Roofing, Cabinets, and Doors)</option>
+          <option>Site Supervisors / Foremen</option>
+        </select>
+
+        <label>Project Details</label>
+        <textarea
+          name="details"
+          rows="4"
+          required
+          placeholder="Describe your project or service requirements..."
+        ></textarea>
+
+        <div class="buttons">
+          <button type="reset" class="reset-btn">Reset</button>
+          <button type="submit" id="submitBtn" class="submit-btn">
+            Submit Request
+          </button>
+        </div>
+      </form>
+    </div>
+    foo
+  </body>
+  <script>
+    document
+      .getElementById("serviceForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault(); // Stop normal submission
+
+        const btn = document.getElementById("submitBtn");
+
+        btn.style.background = "#28a745"; // green
+        btn.textContent = "Request Sent";
+
+        // Redirect after 2 seconds
+        setTimeout(() => {
+          window.location.href = "";
+        }, 2000);
+      });
+  </script>
+</html>
