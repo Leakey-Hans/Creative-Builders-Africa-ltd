@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="color-scheme" content="light">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Quote.css">
+</head>
+<body>
+    <header>
+      <!--landing page navigation bar-->
+      <nav>
+        <div class="nav_container">
+          <img
+            src="../images/logo.png"
+            alt="creative builders logo"
+            height="60"
+          />
+          <!--Navlinks-->
+          <ul class="navlinks" id="Navlinks">
+            <li>
+              <strong
+                ><a href="../index.html" rel="noopener noreferrer">Home</a></strong
+              >
+            </li>
+            <li>
+              <a href="./about.html" rel="noopener  noreferrer"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="https://wa.me/254702066062" rel="noopener noreferrer"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="./Fundi.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ask For a Fundi</a
+              >
+            </li>
+            <li id="nav_cta">
+              <a
+                href="./Quote.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Get a Quick Quote</a
+              >
+            </li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="quote-form-container">
+  <h2>Get a Quick Quote</h2>
+  <p>Fill in your details and we’ll send you a quick estimate.</p>
+
+  <form id="quoteForm">
+    <label>Name</label>
+    <input type="text" name="name" required placeholder="Enter your name" />
+
+    <label>Email</label>
+    <input type="email" name="email" required placeholder="Enter your email" />
+
+    <label>Phone Number</label>
+    <input type="tel" name="phone" required placeholder="+254 712 345 678" />
+
+    <label>Project Type</label>
+    <select name="projectType" required>
+      <option value="">Select project type</option>
+      <option>Infrastructure Project</option>
+      <option>Residential Project</option>
+      <option>Commercial Project</option>
+      <option>Industrial Project</option>
+      <option>Interior Design Works</option>
+      <option>Graphic Design</option>
+      <option>Renovation</option>
+      <option>Web Development</option>
+    </select>
+
+    <label>Project Location</label>
+    <input type="text" name="Project-Location" required placeholder="e.g Nairobi, Westlands">
+
+    <label>Project Area estimate</label>
+    <input type="text" name="Area">
+
+    <div class="buttons">
+      <button type="reset" class="reset-btn">Reset</button>
+      <button type="submit" id="quoteSubmitBtn" class="submit-btn">Get Quote</button>
+    </div>
+  </form>
+</div>
+</body>
+<script>
+document.getElementById("quoteForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const btn = document.getElementById("quoteSubmitBtn");
+
+  btn.style.background = "#28a745"; // green
+  btn.textContent = "Quote Requested";
+
+  setTimeout(() => {
+    window.location.href = "/";
+  }, 2000);
+});
+</script>
+</html>
