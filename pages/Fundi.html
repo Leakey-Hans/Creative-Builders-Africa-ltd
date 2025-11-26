@@ -118,8 +118,17 @@
     </div>
   </body>
   <script>
-    document
-      .getElementById("serviceForm")
+
+    const hamburger = document.getElementById('hamburger');
+        const Navlinks = document.getElementById('Navlinks');
+
+        hamburger.addEventListener('click', function() {
+            Navlinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+
+    document.getElementById("serviceForm")
       .addEventListener("submit", function (e) {
         e.preventDefault(); // Stop normal submission
 
