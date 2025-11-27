@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kedebideri:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Creative Builders Africa</title>
     <link rel="stylesheet" href="about.css">
+    <link rel="icon" type="image/png" href="../images/favicon/favicon.png">
 </head>
 <body>
     <main>
@@ -45,7 +46,7 @@
             </div>
         </section>
         <section>
-            <div class="section-container">
+            <div class="section-container" data-aos="fade-up">
                 <div class="about-div">
                     <h3 style="font-weight: 600; font-size: 25px;">About Us</h3><br>
                     <p>Creative Builders Africa Limited is a multidisciplinary firm in Kenya specializing specializing in architecture, construction, interior design, graphic design and renovations. We are committed to transforming Spaces through innovative, sustainable and cost effective solutions tailored to our clients needs.
@@ -120,6 +121,14 @@
         </div>
     </footer>
 </body>
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>//Make sure animate on scroll runs first
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    </script>
 <script>
     //Nav bar media query: Ham menu
         const hamburger = document.getElementById('hamburger');
