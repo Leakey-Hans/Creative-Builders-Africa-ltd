@@ -68,7 +68,8 @@
   <h2>Get a Quick Quote</h2>
   <p>Fill in your details and we’ll send you a quick estimate.</p>
 
-  <form id="quoteForm">
+  <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="3c6a7f71-46c1-4d4e-a379-1d8225b02ebf">
     <label>Name</label>
     <input type="text" name="name" required placeholder="Enter your name" />
 
